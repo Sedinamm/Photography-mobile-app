@@ -5,10 +5,11 @@ const IntroScreen = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text style={{color:"white"}}>IntroScreen</Text>
+      {/* <Text style={{color:"white"}}>IntroScreen</Text> */}
+      <Image style={{width:400, height:822}} source={require('../Images/1.jpg')} />
     </View>
     </SafeAreaView>
   )
 }
 
-export default IntroScreen
+export default IntroScreen;
