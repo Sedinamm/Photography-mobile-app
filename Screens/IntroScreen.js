@@ -110,6 +110,12 @@ const IntroScreen = () => {
           </TouchableOpacity>
           </View>
         </View>
+
+              <View style={{position:"absolute", alignSelf:"center", top:720}}>
+                <TouchableOpacity>
+                  <Text style={{color:"#fff", fontWeight:"bold", fontSize:17}}>Sign In</Text>
+                </TouchableOpacity>
+              </View>
       </View>
     </SafeAreaView>
   );
