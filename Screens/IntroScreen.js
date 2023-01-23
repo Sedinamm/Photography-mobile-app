@@ -6,6 +6,7 @@ const IntroScreen = () => {
     <SafeAreaView>
     <View>
       <Text style={{color:"white"}}>IntroScreen</Text>
+      <img />
     </View>
     </SafeAreaView>
   )
