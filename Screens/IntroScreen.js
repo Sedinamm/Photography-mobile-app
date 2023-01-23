@@ -6,7 +6,7 @@ const IntroScreen = () => {
     <SafeAreaView>
     <View>
       {/* <Text style={{color:"white"}}>IntroScreen</Text> */}
-      <Image style={{width:400, height:822}} source={require('../Images/1.jpg')} />
+      <Image style={{width:400, height:822}} source={require('../Images/2.png')} />
     </View>
     </SafeAreaView>
   )
