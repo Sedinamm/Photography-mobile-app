@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import IntroScreen from './Screens/IntroScreen';
 import Signup from './Screens/Signup';
 import Login from './Screens/Login';
+import PrivacyPolicy from './Screens/PrivacyPolicy';
 
 
 
@@ -13,6 +14,7 @@ export default function App() {
       <IntroScreen/>
       {/* <Signup/> */}
       {/* <Login/> */}
+      {/* <PrivacyPolicy/> */}
     </View>
   );
 }
