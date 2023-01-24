@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import IntroScreen from './Screens/IntroScreen';
 import Signup from './Screens/Signup';
+import Login from './Screens/Login';
 
 
 
@@ -11,6 +12,7 @@ export default function App() {
       {/* <StatusBar style="auto" /> */}
       <IntroScreen/>
       {/* <Signup/> */}
+      {/* <Login/> */}
     </View>
   );
 }
