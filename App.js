@@ -4,6 +4,7 @@ import IntroScreen from './Screens/IntroScreen';
 import Signup from './Screens/Signup';
 import Login from './Screens/Login';
 import PrivacyPolicy from './Screens/PrivacyPolicy';
+import Home from './Screens/Home';
 
 
 
@@ -15,6 +16,7 @@ export default function App() {
       {/* <Signup/> */}
       {/* <Login/> */}
       {/* <PrivacyPolicy/> */}
+      {/* <Home/> */}
     </View>
   );
 }
