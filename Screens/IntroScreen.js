@@ -29,7 +29,7 @@ const IntroScreen = () => {
             shadowOpacity: 1,
           }}
         >
-          PicLancer
+          Piclancer
         </Text>
         <Text
           style={{
