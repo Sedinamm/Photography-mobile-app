@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
 const Signup = () => {
   return (
+    <SafeAreaView>
     <View>
-      <Text>Signup</Text>
+      <Text style={{color:"white"}}>Signup</Text>
     </View>
+    </SafeAreaView>
   )
 }
 
