@@ -47,12 +47,12 @@ export default function Signup() {
 
       {/* Text and Icons */}
       <View style={{flex: 3,backgroundColor: "#4518",}}>
-      <Text style={{paddingLeft:10,}}>Herh chale, eno eaasy ohh</Text>
+      <Text style={{paddingLeft:10,}}>Google, Phone Number and Facebook Icon</Text>
       </View>
 
       {/* Already have an account? */}
       <View style={{flex: 1,backgroundColor: "red",}}>
-      <Text style={{paddingLeft:10, paddingTop:30}}>Herh chale, eno eaasy ohh</Text>
+      <Text style={{paddingLeft:10, paddingTop:30}}>Already have an account, login</Text>
       </View>
     </View>
   );
