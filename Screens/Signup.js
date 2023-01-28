@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   TextInput,
   SafeAreaView,
-  TextInput,
 } from "react-native";
 
 export default function Signup() {
