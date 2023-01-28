@@ -15,13 +15,13 @@ export default function Signup() {
 
       {/* Signup text */}
       <View style={{ flex: 2, backgroundColor: "green" }}>
-        <Text style={{paddingLeft:10, paddingTop:114, fontSize:25, fontWeight:"bold", color:"white"}}>Sign Up Today</Text>
+        <Text style={{marginLeft:20, paddingTop:114, fontSize:25, fontWeight:"bold", color:"white"}}>Sign Up Today</Text>
       </View>
 
       {/* Text input and Btn */}
       <View style={{flex: 5,backgroundColor: "#7448",}}>
         {/* Email */}
-      <View style={{top: 40, margin:20, top:20 }}>
+      <View style={{top: 40, margin:20, top:30, }}>
             <TextInput
               keyboardType="email-address"
               placeholder="Email"
@@ -31,6 +31,17 @@ export default function Signup() {
                 borderRadius: 10,
               }}
             />
+          </View>
+          {/* Password */}
+          <View style={{top:40, margin:20, top:10}}>
+            <TextInput
+            placeholder="Password"
+            style={{
+              backgroundColor:"white",
+              padding:20,
+              borderRadius:10,
+              
+            }}/>
           </View>
       </View>
 
