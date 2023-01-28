@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TextInput,
   SafeAreaView,
+  TextInput,
 } from "react-native";
 
 export default function Signup() {
@@ -15,7 +16,7 @@ export default function Signup() {
 
       {/* Signup text */}
       <View style={{ flex: 2, backgroundColor: "green" }}>
-        <Text style={{paddingLeft:10, paddingTop:60}}>Sign Up Today</Text>
+        <Text style={{paddingLeft:10, paddingTop:114, fontSize:25, fontWeight:"bold", color:"white"}}>Sign Up Today</Text>
       </View>
 
       {/* Text input and Btn */}
