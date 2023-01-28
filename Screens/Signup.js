@@ -15,7 +15,7 @@ export default function Signup() {
 
       {/* Signup text */}
       <View style={{ flex: 2, backgroundColor: "green" }}>
-        <Text style={{paddingLeft:10, paddingTop:60}}>Herh chale, eno eaasy ohh</Text>
+        <Text style={{paddingLeft:10, paddingTop:60}}>Sign Up Today</Text>
       </View>
 
       {/* Text input and Btn */}
