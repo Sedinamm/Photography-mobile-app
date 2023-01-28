@@ -20,7 +20,18 @@ export default function Signup() {
 
       {/* Text input and Btn */}
       <View style={{flex: 5,backgroundColor: "#7448",}}>
-      <Text style={{paddingLeft:10, }}>Herh chale, eno eaasy ohh</Text>
+        {/* Email */}
+      <View style={{top: 40, margin:20, top:20 }}>
+            <TextInput
+              keyboardType="email-address"
+              placeholder="Email"
+              style={{
+                backgroundColor: "white",
+                padding: 20,
+                borderRadius: 10,
+              }}
+            />
+          </View>
       </View>
 
       {/* Text and Icons */}
