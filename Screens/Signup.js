@@ -40,8 +40,19 @@ export default function Signup() {
               backgroundColor:"white",
               padding:20,
               borderRadius:10,
-              
-            }}/>
+              }}
+            />
+          </View>
+          {/* Phone Number */}
+          <View style={{top:40, margin:20, top:10}}>
+            <TextInput
+            placeholder="Password"
+            style={{
+              backgroundColor:"white",
+              padding:20,
+              borderRadius:10,
+              }}
+            />
           </View>
       </View>
 
