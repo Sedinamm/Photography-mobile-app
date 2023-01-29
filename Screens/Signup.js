@@ -82,7 +82,7 @@ export default function Signup() {
 
       {/* Already have an account? */}
       <View style={{flex: 1,backgroundColor: "red",}}>
-      <Text style={{paddingLeft:10, paddingTop:30}}>Already have an account, login</Text>
+      <Text style={{paddingLeft:10, paddingTop:30}}>By signing up, you agee to our terms of use</Text>
       </View>
     </View>
   );
