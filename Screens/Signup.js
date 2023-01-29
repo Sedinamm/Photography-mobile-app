@@ -55,6 +55,9 @@ export default function Signup() {
               }}
             />
           </View>
+          <Text>
+            Already have an account
+          </Text>
           </View>
       </View>
 
