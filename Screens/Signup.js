@@ -64,8 +64,12 @@ export default function Signup() {
             </TouchableOpacity>
               </Text>
             </View>
-
-            <View></View>
+              {/* Sign up Button */}
+            <View>
+              <TouchableOpacity>
+              <View style={{height:60, width:250, backgroundColor:"#00FFF0", alignSelf:"center", borderRadius:10}}></View>
+              </TouchableOpacity>
+            </View>
           </View>
       </View>
 
