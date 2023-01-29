@@ -21,7 +21,7 @@ export default function Signup() {
       {/* Text input and Btn */}
       <View style={{flex: 5,backgroundColor: "#7448", }}>
         {/* Email */}
-        <View style={{top:15}}>
+        <View style={{top:-10}}>
       <View style={{top: 20, margin:20, }}>
             <TextInput
               keyboardType="email-address"
@@ -55,9 +55,17 @@ export default function Signup() {
               }}
             />
           </View>
-          <Text>
-            Already have an account
-          </Text>
+          {/* Text{Already have an account?} */}
+          <View>
+          <Text style={{color:"white", marginLeft:143, bottom:20,}}>
+            Already have an account? 
+            <TouchableOpacity>
+              <Text style={{color:"#00FFF0", bottom:-3,}}>Sign In</Text>
+            </TouchableOpacity>
+              </Text>
+            </View>
+
+            <View></View>
           </View>
       </View>
 
