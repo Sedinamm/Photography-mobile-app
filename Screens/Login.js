@@ -4,7 +4,10 @@ import React from 'react'
 const Login = () => {
   return (
     <View style={{flex:10}}>
-      <View></View>
+      {/* Text (Login) */}
+      <View style={{flex:2, backgroundColor:"green"}}></View>
+      {/* TextInput */}
+      <View style={{flex:2, backgroundColor:"yellow"}}></View>
     </View>
   )
 }
