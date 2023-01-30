@@ -3,7 +3,7 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <View>
+    <View style={{flex:10}}>
       <View></View>
     </View>
   )
