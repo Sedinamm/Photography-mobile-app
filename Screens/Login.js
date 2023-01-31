@@ -11,7 +11,7 @@ const Login = () => {
 
       {/* TextInput */}
       <View style={{flex:5, backgroundColor:"violet"}}>
-      <View style={{top:-10}}>
+      <View style={{top:15}}>
         {/* Email */}
       <View style={{top: 20, margin:20, }}>
             <TextInput
@@ -41,6 +41,9 @@ const Login = () => {
             <Text style={{color:"white"}}>Forgot Password?</Text>
           </View>
           </TouchableOpacity>
+          <View style={{height:55, width:250, backgroundColor:"#00FFF0", justifyContent:"center", borderRadius:10, alignItems:"center", alignSelf:"center"}}>
+                <Text style={{color:"#000", fontWeight:"bold"}}>Sign in</Text>
+              </View>
           </View>
       </View>
       <View style={{flex:3, backgroundColor:"brown"}}></View>
