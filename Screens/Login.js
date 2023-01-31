@@ -36,6 +36,11 @@ const Login = () => {
               }}
             />
           </View>
+          <TouchableOpacity>
+          <View style={{marginLeft:238, bottom:10}}>
+            <Text style={{color:"white"}}>Forgot Password?</Text>
+          </View>
+          </TouchableOpacity>
           </View>
       </View>
       <View style={{flex:3, backgroundColor:"brown"}}></View>
