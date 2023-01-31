@@ -5,7 +5,9 @@ const Login = () => {
   return (
     <View style={{flex:10}}>
       {/* Text (Login) */}
-      <View style={{flex:2, backgroundColor:"green"}}></View>
+      <View style={{flex:2, backgroundColor:"green"}}>
+        <Text style={{marginLeft:20,}}>Login</Text>
+      </View>
       {/* TextInput */}
       <View style={{flex:2, backgroundColor:"yellow"}}></View>
     </View>
