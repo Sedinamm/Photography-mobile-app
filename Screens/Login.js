@@ -10,8 +10,8 @@ const Login = () => {
       </View>
 
       {/* TextInput */}
-      <View style={{flex:5, backgroundColor:"violet"}}>
-      <View style={{top:15}}>
+      <View style={{flex:3, backgroundColor:"violet"}}>
+      <View style={{top:-10}}>
         {/* Email */}
       <View style={{top: 20, margin:20, }}>
             <TextInput
