@@ -6,10 +6,11 @@ const Login = () => {
     <View style={{flex:10}}>
       {/* Text (Login) */}
       <View style={{flex:2, backgroundColor:"green"}}>
-        <Text style={{marginLeft:20,}}>Login</Text>
+        <Text style={{marginLeft:20, paddingTop:114}}>Login</Text>
       </View>
       {/* TextInput */}
-      <View style={{flex:2, backgroundColor:"yellow"}}></View>
+      <View style={{flex:5, backgroundColor:"yellow"}}></View>
+      <View style={{flex:3, backgroundColor:"brown"}}></View>
     </View>
   )
 }
