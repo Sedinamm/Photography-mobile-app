@@ -26,6 +26,16 @@ const Login = () => {
           </View>
 
           {/* Password */}
+          <View style={{top:5, margin:20,}}>
+            <TextInput
+            placeholder="Password"
+            style={{
+              backgroundColor:"white",
+              padding:20,
+              borderRadius:10,
+              }}
+            />
+          </View>
           </View>
       </View>
       <View style={{flex:3, backgroundColor:"brown"}}></View>
