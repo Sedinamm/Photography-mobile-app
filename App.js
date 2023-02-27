@@ -14,10 +14,10 @@ export default function App() {
     <View style={styles.container}>
       {/* <StatusBar style="auto" /> */}
       {/* <IntroScreen/> */}
-      <Signup/>
+      {/* <Signup/> */}
       {/* <Login/> */}
       {/* <PrivacyPolicy/> */}
-      {/* <Home/> */}
+      <Home/>
       {/* <Profile/> */}
     </View>
   );
