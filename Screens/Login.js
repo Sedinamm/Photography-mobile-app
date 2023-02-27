@@ -42,7 +42,7 @@ const Login = () => {
           </View>
           </TouchableOpacity>
           <View style={{height:55, width:250, backgroundColor:"#00FFF0", justifyContent:"center", borderRadius:10, alignItems:"center", alignSelf:"center"}}>
-                <Text style={{color:"#000", fontWeight:"bold"}}>Sign in</Text>
+                <Text style={{color:"#000",}}>Sign in</Text>
               </View>
           </View>
       </View>
