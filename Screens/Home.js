@@ -4,7 +4,9 @@ import React from 'react'
 const Home = () => {
   return (
     <View style={{flex:10, backgroundColor:"yellow"}}>
+      <View>
       <Text>Home</Text>
+      </View>
     </View>
   )
 }
