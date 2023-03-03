@@ -13,11 +13,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <StatusBar style="auto" /> */}
-      {/* <IntroScreen/> */}
+      <IntroScreen/>
       {/* <Signup/> */}
       {/* <Login/> */}
       {/* <PrivacyPolicy/> */}
-      <Home/>
+      {/* <Home/> */}
       {/* <Profile/> */}
     </View>
   );

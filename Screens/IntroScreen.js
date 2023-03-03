@@ -24,29 +24,14 @@ const IntroScreen = () => {
           Piclancer
         </Text>
         <Text
-          style={{
-            color: "#00FFF0",
-            position: "absolute",
-            fontSize: 70,
-            left: 196,
-            top: 470,
-            shadowOpacity: 1,
-          }}
+          style={styles.fullStop}
         >
           .
         </Text>
 
         {/* Short Description */}
         <Text
-          style={{
-            position: "absolute",
-            top: 550,
-            left: 25,
-            color: "white",
-            fontSize: 20,
-            fontWeight: "bold",
-            shadowOpacity: 1,
-          }}
+          style={styles.shortDescription}
         >
           Your Copyright Free Images {"\n"} App{" "}
         </Text>
@@ -131,4 +116,25 @@ const styles = {
     fontWeight: "bold",
     shadowOpacity: 1,
   },
+
+  fullStop:{
+    color: "#00FFF0",
+    position: "absolute",
+    fontSize: 70,
+    left: 196,
+    top: 470,
+    shadowOpacity: 1,
+  },
+
+  shortDescription:{
+    position: "absolute",
+    top: 550,
+    left: 25,
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
+    shadowOpacity: 1,
+  },
+
+  
 }
