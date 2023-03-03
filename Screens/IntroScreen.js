@@ -33,7 +33,7 @@ const IntroScreen = () => {
         <Text
           style={styles.shortDescription}
         >
-          Your Copyright Free Images {"\n"} App{" "}
+          Your Copyright Free Images {"\n"} App
         </Text>
 
         {/* Cards */}
@@ -136,5 +136,5 @@ const styles = {
     shadowOpacity: 1,
   },
 
-  
+
 }
