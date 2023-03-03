@@ -58,9 +58,9 @@ const IntroScreen = () => {
           </View>
         </View>
 
-              <View style={{position:"absolute", alignSelf:"center", top:720}}>
+              <View style={styles.signInView}>
                 <TouchableOpacity>
-                  <Text style={{color:"#fff", fontWeight:"bold", fontSize:17}}>Sign In</Text>
+                  <Text style={styles.signInText}>Sign In</Text>
                 </TouchableOpacity>
               </View>
       </View>
@@ -152,5 +152,18 @@ const styles = {
     color: "black", 
     textAlign: "center", 
     fontWeight:"bold", 
-    top:5 },
+    top:5 
+  },
+
+  signInView:{
+    position:"absolute", 
+    alignSelf:"center", 
+    top:720
+  },
+
+  signInText:{
+    color:"#fff", 
+    fontWeight:"bold", 
+    fontSize:17
+  },
 }
