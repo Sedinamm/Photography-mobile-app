@@ -13,21 +13,13 @@ const IntroScreen = () => {
       <View>
         {/* Image */}
         <Image
-          style={{ width: 400, height: 822 }}
+          style={styles.backgroundImage}
           source={require("../Images/2.png")}
         />
 
         {/* Text */}
         <Text
-          style={{
-            color: "white",
-            fontSize: 40,
-            position: "absolute",
-            top: 500,
-            left: 25,
-            fontWeight: "bold",
-            shadowOpacity: 1,
-          }}
+          style={styles.introText}
         >
           Piclancer
         </Text>
@@ -122,3 +114,21 @@ const IntroScreen = () => {
 };
 
 export default IntroScreen;
+
+
+const styles = {
+  backgroundImage:{ 
+    width: 400, 
+    height: 822 
+  },
+
+  introText:{
+    color: "white",
+    fontSize: 40,
+    position: "absolute",
+    top: 500,
+    left: 25,
+    fontWeight: "bold",
+    shadowOpacity: 1,
+  },
+}
