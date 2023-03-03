@@ -18,44 +18,27 @@ const IntroScreen = () => {
         />
 
         {/* Text */}
-        <Text
-          style={styles.introText}
-        >
+        <Text style={styles.introText}>
           Piclancer
         </Text>
-        <Text
-          style={styles.fullStop}
-        >
+
+        <Text style={styles.fullStop}>
           .
         </Text>
 
         {/* Short Description */}
         <Text
-          style={styles.shortDescription}
-        >
+          style={styles.shortDescription}>
           Your Copyright Free Images {"\n"} App
         </Text>
 
         {/* Cards */}
-        <View style={{ flexDirection: "row", position: "absolute" }}>
+        <View style={styles.parentCardView}>
           <TouchableOpacity>
             <View
-              style={{
-                backgroundColor: "white",
-                padding: 20,
-                width: "150%",
-                top: 620,
-                left: 25,
-                height: 70,
-                borderRadius: 10,
-                shadowColor: "black",
-                shadowOffset: {width:0, height:2},
-                shadowOpacity:0.26,
-                shadowRadius:6,
-                elevation:5,
-              }}
+              style={styles.firstCardView}
             >
-              <Text style={{ color: "black", textAlign: "center", fontWeight:"bold", top:5 }}>
+              <Text style={styles.cardText1}>
                 Freelance
               </Text>
             </View>
@@ -65,22 +48,9 @@ const IntroScreen = () => {
           <View>
           <TouchableOpacity>
             <View
-              style={{
-                backgroundColor: "white",
-                padding: 20,
-                width: "150%",
-                top: 620,
-                left: 105,
-                height: 70,
-                borderRadius: 10,
-                shadowColor: "black",
-                shadowOffset: {width:0, height:2},
-                shadowOpacity:0.26,
-                shadowRadius:6,
-                elevation:5,
-              }}
+              style={styles.secondCardView}
             >
-              <Text style={{ color: "black", textAlign: "center", fontWeight:"bold", top:5 }}>
+              <Text style={styles.cardText2}>
                 Download
               </Text>
             </View>
@@ -136,5 +106,51 @@ const styles = {
     shadowOpacity: 1,
   },
 
+  parentCardView:{ 
+    flexDirection: "row", 
+    position: "absolute" 
+  },
 
+  firstCardView:{
+    backgroundColor: "white",
+    padding: 20,
+    width: "150%",
+    top: 620,
+    left: 15,
+    height: 70,
+    borderRadius: 10,
+    shadowColor: "black",
+    shadowOffset: {width:0, height:2},
+    shadowOpacity:0.26,
+    shadowRadius:6,
+    elevation:5,
+  },
+
+  cardText1:{ 
+    color: "black", 
+    textAlign: "center", 
+    fontWeight:"bold", 
+    top:5
+   },
+
+   secondCardView:{
+    backgroundColor: "white",
+    padding: 20,
+    width: "150%",
+    top: 620,
+    left: 90,
+    height: 70,
+    borderRadius: 10,
+    shadowColor: "black",
+    shadowOffset: {width:0, height:2},
+    shadowOpacity:0.26,
+    shadowRadius:6,
+    elevation:5,
+  },
+
+  cardText2:{ 
+    color: "black", 
+    textAlign: "center", 
+    fontWeight:"bold", 
+    top:5 },
 }
