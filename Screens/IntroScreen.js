@@ -18,51 +18,38 @@ const IntroScreen = () => {
         />
 
         {/* Text */}
-        <Text style={styles.introText}>
-          Piclancer
-        </Text>
+        <Text style={styles.introText}>Piclancer</Text>
 
-        <Text style={styles.fullStop}>
-          .
-        </Text>
+        <Text style={styles.fullStop}>.</Text>
 
         {/* Short Description */}
-        <Text
-          style={styles.shortDescription}>
+        <Text style={styles.shortDescription}>
           Your Copyright Free Images {"\n"} App
         </Text>
 
         {/* Cards */}
         <View style={styles.parentCardView}>
           <TouchableOpacity>
-            <View
-              style={styles.firstCardView}
-            >
-              <Text style={styles.cardText1}>
-                Freelance
-              </Text>
+            <View style={styles.firstCardView}>
+              <Text style={styles.cardText1}>Freelance</Text>
             </View>
           </TouchableOpacity>
 
           {/* Second Card */}
           <View>
-          <TouchableOpacity>
-            <View
-              style={styles.secondCardView}
-            >
-              <Text style={styles.cardText2}>
-                Download
-              </Text>
-            </View>
-          </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.secondCardView}>
+                <Text style={styles.cardText2}>Download</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
 
-              <View style={styles.signInView}>
-                <TouchableOpacity>
-                  <Text style={styles.signInText}>Sign In</Text>
-                </TouchableOpacity>
-              </View>
+        <View style={styles.signInView}>
+          <TouchableOpacity>
+            <Text style={styles.signInText}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -70,14 +57,13 @@ const IntroScreen = () => {
 
 export default IntroScreen;
 
-
 const styles = {
-  backgroundImage:{ 
-    width: 400, 
-    height: 822 
+  backgroundImage: {
+    width: 400,
+    height: 822,
   },
 
-  introText:{
+  introText: {
     color: "white",
     fontSize: 40,
     position: "absolute",
@@ -87,7 +73,7 @@ const styles = {
     shadowOpacity: 1,
   },
 
-  fullStop:{
+  fullStop: {
     color: "#00FFF0",
     position: "absolute",
     fontSize: 70,
@@ -96,7 +82,7 @@ const styles = {
     shadowOpacity: 1,
   },
 
-  shortDescription:{
+  shortDescription: {
     position: "absolute",
     top: 550,
     left: 25,
@@ -106,12 +92,12 @@ const styles = {
     shadowOpacity: 1,
   },
 
-  parentCardView:{ 
-    flexDirection: "row", 
-    position: "absolute" 
+  parentCardView: {
+    flexDirection: "row",
+    position: "absolute",
   },
 
-  firstCardView:{
+  firstCardView: {
     backgroundColor: "white",
     padding: 20,
     width: "150%",
@@ -120,20 +106,20 @@ const styles = {
     height: 70,
     borderRadius: 10,
     shadowColor: "black",
-    shadowOffset: {width:0, height:2},
-    shadowOpacity:0.26,
-    shadowRadius:6,
-    elevation:5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.26,
+    shadowRadius: 6,
+    elevation: 5,
   },
 
-  cardText1:{ 
-    color: "black", 
-    textAlign: "center", 
-    fontWeight:"bold", 
-    top:5
-   },
+  cardText1: {
+    color: "black",
+    textAlign: "center",
+    fontWeight: "bold",
+    top: 5,
+  },
 
-   secondCardView:{
+  secondCardView: {
     backgroundColor: "white",
     padding: 20,
     width: "150%",
@@ -142,28 +128,28 @@ const styles = {
     height: 70,
     borderRadius: 10,
     shadowColor: "black",
-    shadowOffset: {width:0, height:2},
-    shadowOpacity:0.26,
-    shadowRadius:6,
-    elevation:5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.26,
+    shadowRadius: 6,
+    elevation: 5,
   },
 
-  cardText2:{ 
-    color: "black", 
-    textAlign: "center", 
-    fontWeight:"bold", 
-    top:5 
+  cardText2: {
+    color: "black",
+    textAlign: "center",
+    fontWeight: "bold",
+    top: 5,
   },
 
-  signInView:{
-    position:"absolute", 
-    alignSelf:"center", 
-    top:720
+  signInView: {
+    position: "absolute",
+    alignSelf: "center",
+    top: 720,
   },
 
-  signInText:{
-    color:"#fff", 
-    fontWeight:"bold", 
-    fontSize:17
+  signInText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 17,
   },
-}
+};
