@@ -3,7 +3,7 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <View style={{flex:10}}>
+    <View style={styles.parentView}>
       {/* Text (Login) */}
       <View style={{flex:2, backgroundColor:"green"}}>
         <Text style={{marginLeft:20, paddingTop:114,fontSize:25, fontWeight:"bold", color:"white"}}>Login</Text>
@@ -52,3 +52,9 @@ const Login = () => {
 }
 
 export default Login
+
+const styles = {
+  parentView :{
+    flex:10
+  },
+}
