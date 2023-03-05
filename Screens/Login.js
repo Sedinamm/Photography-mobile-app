@@ -10,7 +10,7 @@ const Login = () => {
       </View>
 
       {/* TextInput */}
-      <View style={{flex:5, backgroundColor:"violet"}}>
+      <View style={styles.TextInputView}>
       <View style={{top:-10}}>
         {/* Email */}
       <View style={{top: 20, margin:20, }}>
@@ -70,4 +70,10 @@ const styles = {
     fontWeight:"bold", 
     color:"white"
   },
+
+  TextInputView: {
+    flex:5, 
+    backgroundColor:"violet"
+  },
+
 }
