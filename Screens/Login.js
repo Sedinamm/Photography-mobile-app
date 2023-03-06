@@ -17,11 +17,7 @@ const Login = () => {
             <TextInput
               keyboardType="email-address"
               placeholder="Email"
-              style={{
-                backgroundColor: "white",
-                padding: 20,
-                borderRadius: 10,
-              }}
+              style={styles.emailTextInput}
             />
           </View>
 
@@ -80,5 +76,11 @@ const styles = {
     top: 20, 
     margin:20,
    },
+
+   emailTextInput:{
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 10,
+  },
 
 }
