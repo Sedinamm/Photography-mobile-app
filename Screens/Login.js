@@ -13,7 +13,7 @@ const Login = () => {
       <View style={styles.TextInputView}>
       <View style={{top:-10}}>
         {/* Email */}
-      <View style={{top: 20, margin:20, }}>
+      <View style={styles.emailView}>
             <TextInput
               keyboardType="email-address"
               placeholder="Email"
@@ -75,5 +75,10 @@ const styles = {
     flex:5, 
     backgroundColor:"violet"
   },
+
+  emailView:{
+    top: 20, 
+    margin:20,
+   },
 
 }
