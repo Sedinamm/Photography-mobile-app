@@ -25,11 +25,7 @@ const Login = () => {
           <View style={styles.passwordView}>
             <TextInput
             placeholder="Password"
-            style={{
-              backgroundColor:"white",
-              padding:20,
-              borderRadius:10,
-              }}
+            style={styles.passwordTextInput}
             />
           </View>
           <TouchableOpacity>
@@ -87,5 +83,11 @@ const styles = {
     top:5, 
     margin:20,
   },
+
+  passwordTextInput:{
+    backgroundColor:"white",
+    padding:20,
+    borderRadius:10,
+    },
 
 }
