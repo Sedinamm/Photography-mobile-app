@@ -22,7 +22,7 @@ const Login = () => {
           </View>
 
           {/* Password */}
-          <View style={{top:5, margin:20,}}>
+          <View style={styles.passwordView}>
             <TextInput
             placeholder="Password"
             style={{
@@ -81,6 +81,11 @@ const styles = {
     backgroundColor: "white",
     padding: 20,
     borderRadius: 10,
+  },
+
+  passwordView:{
+    top:5, 
+    margin:20,
   },
 
 }
