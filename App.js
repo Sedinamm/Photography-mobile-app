@@ -13,9 +13,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <StatusBar style="auto" /> */}
-      <IntroScreen/>
+      {/* <IntroScreen/> */}
       {/* <Signup/> */}
-      {/* <Login/> */}
+      <Login/>
       {/* <PrivacyPolicy/> */}
       {/* <Home/> */}
       {/* <Profile/> */}

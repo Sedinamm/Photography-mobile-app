@@ -33,9 +33,11 @@ const Login = () => {
             <Text style={{color:"white"}}>Forgot Password?</Text>
           </View>
           </TouchableOpacity>
+          <TouchableOpacity>
           <View style={{height:55, width:250, backgroundColor:"#00FFF0", justifyContent:"center", borderRadius:10, alignItems:"center", alignSelf:"center"}}>
                 <Text style={{color:"#000",}}>Sign in</Text>
               </View>
+              </TouchableOpacity>
           </View>
       </View>
       <View style={{flex:3, backgroundColor:"brown"}}></View>
