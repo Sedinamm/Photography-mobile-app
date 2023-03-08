@@ -28,13 +28,15 @@ const Login = () => {
             style={styles.passwordTextInput}
             />
           </View>
+          {/* Forgot password button */}
           <TouchableOpacity>
-          <View style={{marginLeft:238, bottom:10}}>
-            <Text style={{color:"white"}}>Forgot Password?</Text>
+          <View style={styles.forgotPasswordbtnView}>
+            <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
           </View>
           </TouchableOpacity>
+          {/* Sign in button and text */}
           <TouchableOpacity>
-          <View style={{height:55, width:250, backgroundColor:"#00FFF0", justifyContent:"center", borderRadius:10, alignItems:"center", alignSelf:"center"}}>
+          <View style={styles.signInVew}>
                 <Text style={{color:"#000",}}>Sign in</Text>
               </View>
               </TouchableOpacity>
@@ -90,6 +92,25 @@ const styles = {
     backgroundColor:"white",
     padding:20,
     borderRadius:10,
+    },
+
+    forgotPasswordbtnView:{
+      marginLeft:238, 
+      bottom:10
+    },
+
+    forgotPasswordText:{
+      color:"white"
+    },
+
+    signInVew:{
+      height:55, 
+      width:250, 
+      backgroundColor:"#00FFF0", 
+      justifyContent:"center", 
+      borderRadius:10, 
+      alignItems:"center", 
+      alignSelf:"center"
     },
 
 }
