@@ -42,7 +42,9 @@ const Login = () => {
               </TouchableOpacity>
           </View>
       </View>
-      <View style={{flex:3, backgroundColor:"brown"}}></View>
+      <View style={{flex:3, backgroundColor:"brown"}}>
+        <Text>Next View</Text>
+      </View>
     </View>
   )
 }
