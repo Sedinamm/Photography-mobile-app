@@ -37,7 +37,7 @@ const Login = () => {
           {/* Sign in button and text */}
           <TouchableOpacity>
           <View style={styles.signInVew}>
-                <Text style={{color:"#000",}}>Sign in</Text>
+                <Text style={styles.signInText}>Sign in</Text>
               </View>
               </TouchableOpacity>
           </View>
@@ -111,6 +111,10 @@ const styles = {
       borderRadius:10, 
       alignItems:"center", 
       alignSelf:"center"
+    },
+
+    signInText:{
+      color:"#000",
     },
 
 }
