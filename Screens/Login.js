@@ -6,7 +6,7 @@ const Login = () => {
     <View style={styles.parentView}>
       {/* Text (Login) */}
       <View style={styles.loginView}>
-        <Text style={styles.loginText}>Login</Text>
+        <Text style={styles.loginText}>Login and Explore</Text>
       </View>
 
       {/* TextInput */}
