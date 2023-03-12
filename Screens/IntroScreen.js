@@ -47,7 +47,7 @@ const IntroScreen = () => {
 
         <View style={styles.signInView}>
           <TouchableOpacity>
-            <Text style={styles.signInText}>Sign In</Text>
+            <Text style={styles.signInText}>Login</Text>
           </TouchableOpacity>
         </View>
       </View>
