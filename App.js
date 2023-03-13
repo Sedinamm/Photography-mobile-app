@@ -6,6 +6,7 @@ import Login from './Screens/Login';
 import PrivacyPolicy from './Screens/PrivacyPolicy';
 import Home from './Screens/Home';
 import Profile from './Screens/Profile';
+import Main from './Screens/Main';
 
 
 
@@ -19,6 +20,8 @@ export default function App() {
       {/* <PrivacyPolicy/> */}
       {/* <Home/> */}
       {/* <Profile/> */}
+      {/* <Main/> */}
+
     </View>
   );
 }
