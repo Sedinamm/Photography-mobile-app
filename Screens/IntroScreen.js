@@ -18,7 +18,7 @@ const IntroScreen = () => {
         />
 
         {/* Text */}
-        <Text style={styles.introText}>Piclancer</Text>
+        <Text style={styles.introText}>PicLancer</Text>
 
         <Text style={styles.fullStop}>.</Text>
 
