@@ -77,7 +77,7 @@ const styles = {
     color: "#00FFF0",
     position: "absolute",
     fontSize: 70,
-    left: 196,
+    left: 203,
     top: 470,
     shadowOpacity: 1,
   },
