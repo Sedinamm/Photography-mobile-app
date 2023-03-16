@@ -84,7 +84,7 @@ const styles = {
 
   shortDescription: {
     position: "absolute",
-    top: 550,
+    top: 551,
     left: 25,
     color: "white",
     fontSize: 20,
