@@ -58,7 +58,9 @@ const Login = () => {
                 borderRadius: 10,
                 marginLeft:10
               }}
-            ></View>
+            >
+              <Text>Image</Text>
+            </View>
           </TouchableOpacity>
           {/* Google button */}
           <TouchableOpacity>
@@ -70,16 +72,18 @@ const Login = () => {
                 borderRadius: 10,
                 marginLeft:6
               }}
-            ></View>
+            >
+              <Text>Image</Text>
+            </View>
           </TouchableOpacity>
         </View>
         {/* Already have an account? */}
-        {/* <View style={{marginTop:30, alignSelf:"center", flexDirection:"row"}}>
+        <View style={{marginTop:30, alignSelf:"center", flexDirection:"row"}}>
           <Text style={{color:"white"}}>Don't have an account?</Text>
           <TouchableOpacity>
             <Text style={{left:5, color:"white"}}>Sign up</Text>
           </TouchableOpacity>
-        </View> */}
+        </View>
       </View>
     </View>
   );
