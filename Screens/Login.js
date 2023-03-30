@@ -1,5 +1,5 @@
-import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
+import React from "react";
 
 const Login = () => {
   return (
@@ -11,9 +11,9 @@ const Login = () => {
 
       {/* TextInput */}
       <View style={styles.TextInputView}>
-      <View style={{top:-10}}>
-        {/* Email */}
-      <View style={styles.emailView}>
+        <View style={{ top: -10 }}>
+          {/* Email */}
+          <View style={styles.emailView}>
             <TextInput
               keyboardType="email-address"
               placeholder="Email"
@@ -24,99 +24,137 @@ const Login = () => {
           {/* Password */}
           <View style={styles.passwordView}>
             <TextInput
-            placeholder="Password"
-            style={styles.passwordTextInput}
+              placeholder="Password"
+              style={styles.passwordTextInput}
             />
           </View>
           {/* Forgot password button */}
           <TouchableOpacity>
-          <View style={styles.forgotPasswordbtnView}>
-            <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-          </View>
+            <View style={styles.forgotPasswordbtnView}>
+              <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+            </View>
           </TouchableOpacity>
-          {/* Sign in button and text */}
-          <TouchableOpacity>
-          <View style={styles.signInVew}>
-                <Text style={styles.signInText}>Sign in</Text>
-              </View>
-              </TouchableOpacity>
-          </View>
+        </View>
       </View>
-      <View style={{flex:3, backgroundColor:"brown"}}>
-        <Text>Next View</Text>
+
+      {/* Sign in button and text */}
+      <View style={{ flex: 2, backgroundColor: "brown" }}>
+        {/* Login Button */}
+        <View style={{ flexDirection: "row", alignSelf: "center", top: 20,  }}>
+          <TouchableOpacity>
+            <View style={styles.signInVew}>
+              <Text style={styles.signInText}>Login</Text>
+            </View>
+          </TouchableOpacity>
+
+          {/* Phone and Google button */}
+          {/* Phone button */}
+          <TouchableOpacity>
+            <View
+              style={{
+                height: 70,
+                width: 80,
+                backgroundColor: "yellow",
+                borderRadius: 10,
+                marginLeft:10
+              }}
+            ></View>
+          </TouchableOpacity>
+          {/* Google button */}
+          <TouchableOpacity>
+            <View
+              style={{
+                height: 70,
+                width: 80,
+                backgroundColor: "green",
+                borderRadius: 10,
+                marginLeft:6
+              }}
+            ></View>
+          </TouchableOpacity>
+        </View>
+        {/* Already have an account? */}
+        {/* <View style={{marginTop:30, alignSelf:"center", flexDirection:"row"}}>
+          <Text style={{color:"white"}}>Don't have an account?</Text>
+          <TouchableOpacity>
+            <Text style={{left:5, color:"white"}}>Sign up</Text>
+          </TouchableOpacity>
+        </View> */}
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
 
 const styles = {
-  parentView :{
-    flex:10
+  parentView: {
+    flex: 10,
   },
-
+  // Login View and text
   loginView: {
-    flex:2, 
-    backgroundColor:"green"
+    flex: 2,
+    backgroundColor: "green",
   },
 
   loginText: {
-    marginLeft:20, 
-    paddingTop:114,
-    fontSize:25, 
-    fontWeight:"bold", 
-    color:"white"
+    marginLeft: 20,
+    paddingTop: 114,
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "white",
   },
 
+  // TextInputs
   TextInputView: {
-    flex:5, 
-    backgroundColor:"violet"
+    flex: 6,
+    backgroundColor: "violet",
   },
 
-  emailView:{
-    top: 20, 
-    margin:20,
-   },
+  emailView: {
+    top: 20,
+    margin: 20,
+  },
 
-   emailTextInput:{
+  emailTextInput: {
     backgroundColor: "white",
     padding: 20,
     borderRadius: 10,
   },
 
-  passwordView:{
-    top:5, 
-    margin:20,
+  passwordView: {
+    top: 5,
+    margin: 20,
   },
 
-  passwordTextInput:{
-    backgroundColor:"white",
-    padding:20,
-    borderRadius:10,
-    },
+  passwordTextInput: {
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 10,
+  },
 
-    forgotPasswordbtnView:{
-      marginLeft:238, 
-      bottom:10
-    },
+  // Forgot password text button
+  forgotPasswordbtnView: {
+    marginLeft: 238,
+    bottom: 10,
+  },
 
-    forgotPasswordText:{
-      color:"white"
-    },
+  forgotPasswordText: {
+    color: "white",
+  },
 
-    signInVew:{
-      height:55, 
-      width:250, 
-      backgroundColor:"#00FFF0", 
-      justifyContent:"center", 
-      borderRadius:10, 
-      alignItems:"center", 
-      alignSelf:"center"
-    },
+  signInVew: {
+    height: 70,
+    width: 140,
+    backgroundColor: "#00FFF0",
+    justifyContent: "center",
+    borderRadius: 10,
+    alignItems: "center",
+    marginRight:15
+    // alignSelf: "center",
+  },
 
-    signInText:{
-      color:"#000",
-    },
-
-}
+  signInText: {
+    color: "#000",
+  },
+};
