@@ -52,28 +52,30 @@ const Login = () => {
           <TouchableOpacity>
             <View
               style={{
-                height: 70,
+                height: 60,
                 width: 80,
-                backgroundColor: "yellow",
+                backgroundColor: "white",
                 borderRadius: 10,
-                marginLeft:10
+                // marginLeft:10
+                
               }}
             >
-              <Text>Image</Text>
+              <Image style={{height:60, width:80, alignSelf:"center", bottom:1}} source={require('../Images/Untitled-1.png')}/>
             </View>
           </TouchableOpacity>
           {/* Google button */}
           <TouchableOpacity>
             <View
               style={{
-                height: 70,
+                height: 60,
                 width: 80,
-                backgroundColor: "green",
+                backgroundColor: "white",
                 borderRadius: 10,
-                marginLeft:6
+                marginLeft:10,
+                // shadowOpacity:9,
               }}
             >
-              <Text>Image</Text>
+              <Image style={{height:30, width:30, alignSelf:"center", top:15}} source={require('../Images/google.png')}/>
             </View>
           </TouchableOpacity>
         </View>
@@ -97,7 +99,7 @@ const styles = {
   },
   // Login View and text
   loginView: {
-    flex: 2,
+    flex: 4,
     backgroundColor: "green",
   },
 
@@ -111,7 +113,7 @@ const styles = {
 
   // TextInputs
   TextInputView: {
-    flex: 6,
+    flex: 4,
     backgroundColor: "violet",
   },
 
@@ -148,17 +150,20 @@ const styles = {
   },
 
   signInVew: {
-    height: 70,
-    width: 140,
+    height: 60,
+    width: 150,
     backgroundColor: "#00FFF0",
+    // backgroundColor: "#00FFF0",
     justifyContent: "center",
     borderRadius: 10,
     alignItems: "center",
-    marginRight:15
-    // alignSelf: "center",
+    marginRight:10
+    
   },
 
   signInText: {
     color: "#000",
+    // fontWeight:"bold",
+    fontSize:15
   },
 };
