@@ -115,7 +115,7 @@ const styles = {
   cardText1: {
     color: "black",
     textAlign: "center",
-    fontWeight: "bold",
+    // fontWeight: "bold",
     top: 5,
   },
 
@@ -137,7 +137,7 @@ const styles = {
   cardText2: {
     color: "black",
     textAlign: "center",
-    fontWeight: "bold",
+    // fontWeight: "bold",
     top: 5,
   },
 
@@ -149,7 +149,8 @@ const styles = {
 
   signInText: {
     color: "#fff",
-    fontWeight: "bold",
+    // fontWeight: "bold",
     fontSize: 17,
+    top:-10
   },
 };
