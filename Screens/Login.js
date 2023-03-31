@@ -1,13 +1,19 @@
-import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  TextInput,
+  SafeAreaView,
+} from "react-native";
 import React from "react";
 
 const Login = () => {
   return (
     <View style={styles.parentView}>
-      {/* Text (Login) */}
+      {/* Image and text (Login) */}
       <View style={styles.loginView}>
-        {/* <Text style={styles.loginText}>Login and Explore</Text> */}
-        <Image style={{height:360, width:400,}} source={require('../Images/7.png')} />
+        <Image style={styles.loginImage} source={require("../Images/7.png")} />
       </View>
 
       {/* TextInput */}
@@ -29,6 +35,7 @@ const Login = () => {
               style={styles.passwordTextInput}
             />
           </View>
+
           {/* Forgot password button */}
           <TouchableOpacity>
             <View style={styles.forgotPasswordbtnView}>
@@ -39,9 +46,9 @@ const Login = () => {
       </View>
 
       {/* Sign in button and text */}
-      <View style={{ flex: 2, backgroundColor: "brown" }}>
+      <View style={{ flex: 2 }}>
         {/* Login Button */}
-        <View style={{ flexDirection: "row", alignSelf: "center", top: 10,  }}>
+        <View style={styles.bottomView}>
           <TouchableOpacity>
             <View style={styles.signInVew}>
               <Text style={styles.signInText}>Login</Text>
@@ -51,40 +58,30 @@ const Login = () => {
           {/* Phone and Google button */}
           {/* Phone button */}
           <TouchableOpacity>
-            <View
-              style={{
-                height: 60,
-                width: 80,
-                backgroundColor: "white",
-                borderRadius: 10,
-                // marginLeft:10
-                
-              }}
-            >
-              <Image style={{height:60, width:80, alignSelf:"center", bottom:1}} source={require('../Images/Untitled-1.png')}/>
+            <View style={styles.phoneView}>
+              <Image
+                style={styles.phoneImage}
+                source={require("../Images/Untitled-1.png")}
+              />
             </View>
           </TouchableOpacity>
+
           {/* Google button */}
           <TouchableOpacity>
-            <View
-              style={{
-                height: 60,
-                width: 80,
-                backgroundColor: "white",
-                borderRadius: 10,
-                marginLeft:10,
-                // shadowOpacity:9,
-              }}
-            >
-              <Image style={{height:30, width:30, alignSelf:"center", top:15}} source={require('../Images/google.png')}/>
+            <View style={styles.googleView}>
+              <Image
+                style={styles.googleImage}
+                source={require("../Images/google.png")}
+              />
             </View>
           </TouchableOpacity>
         </View>
-        {/* Already have an account? */}
-        <View style={{marginTop:30, alignSelf:"center", flexDirection:"row"}}>
-          <Text style={{color:"white"}}>Don't have an account?</Text>
+
+        {/* Dont have an account? */}
+        <View style={styles.NoAccount}>
+          <Text style={styles.textColor}>Don't have an account?</Text>
           <TouchableOpacity>
-            <Text style={{left:5, color:"white"}}>Sign up</Text>
+            <Text style={styles.SignUpbutton}>Sign up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -101,21 +98,18 @@ const styles = {
   // Login View and text
   loginView: {
     flex: 4,
-    backgroundColor: "green",
+    // backgroundColor: "green",
   },
 
-  loginText: {
-    marginLeft: 20,
-    paddingTop: 114,
-    fontSize: 25,
-    fontWeight: "bold",
-    color: "white",
+  loginImage: {
+    height: 320,
+    width: 400,
   },
 
   // TextInputs
   TextInputView: {
     flex: 4,
-    backgroundColor: "violet",
+    // backgroundColor: "violet",
   },
 
   emailView: {
@@ -158,13 +152,65 @@ const styles = {
     justifyContent: "center",
     borderRadius: 10,
     alignItems: "center",
-    marginRight:10
-    
+    marginRight: 10,
   },
 
   signInText: {
     color: "#000",
     // fontWeight:"bold",
-    fontSize:15
+    fontSize: 15,
+  },
+
+  // Bottom
+  bottomView: {
+    flexDirection: "row",
+    alignSelf: "center",
+    top: 10,
+  },
+
+  phoneView: {
+    height: 60,
+    width: 80,
+    backgroundColor: "white",
+    borderRadius: 10,
+  },
+
+  phoneImage: {
+    height: 60,
+    width: 80,
+    alignSelf: "center",
+    bottom: 1,
+  },
+
+  googleView: {
+    height: 60,
+    width: 80,
+    backgroundColor: "white",
+    borderRadius: 10,
+    marginLeft: 10,
+    // shadowOpacity:9,
+  },
+
+  googleImage: {
+    height: 30,
+    width: 30,
+    alignSelf: "center",
+    top: 15,
+  },
+
+  // Dont have an account
+  NoAccount: {
+    marginTop: 30,
+    alignSelf: "center",
+    flexDirection: "row",
+  },
+
+  textColor: {
+    color: "white",
+  },
+
+  SignUpbutton: {
+    left: 5,
+    color: "white",
   },
 };
