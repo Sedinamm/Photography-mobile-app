@@ -46,7 +46,7 @@ const Login = () => {
       </View>
 
       {/* Sign in button and text */}
-      <View style={{ flex: 2 }}>
+      <View style={{ flex: 2, backgroundColor:"black" }}>
         {/* Login Button */}
         <View style={styles.bottomView}>
           <TouchableOpacity>
@@ -98,7 +98,7 @@ const styles = {
   // Login View and text
   loginView: {
     flex: 4,
-    // backgroundColor: "green",
+    backgroundColor: "black",
   },
 
   loginImage: {
@@ -109,7 +109,7 @@ const styles = {
   // TextInputs
   TextInputView: {
     flex: 4,
-    // backgroundColor: "violet",
+    backgroundColor: "black",
   },
 
   emailView: {

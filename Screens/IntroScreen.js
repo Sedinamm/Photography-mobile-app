@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 
-const IntroScreen = () => {
+const IntroScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <View>
@@ -29,7 +29,9 @@ const IntroScreen = () => {
 
         {/* Cards */}
         <View style={styles.parentCardView}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> {
+            navigation.navigate("SignupScreen")
+          }}>
             <View style={styles.firstCardView}>
               <Text style={styles.cardText1}>Freelance</Text>
             </View>
@@ -37,7 +39,9 @@ const IntroScreen = () => {
 
           {/* Second Card */}
           <View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{
+              navigation.navigate("SignupScreen")
+            }}>
               <View style={styles.secondCardView}>
                 <Text style={styles.cardText2}>Download</Text>
               </View>
@@ -46,7 +50,9 @@ const IntroScreen = () => {
         </View>
 
         <View style={styles.signInView}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{
+            navigation.navigate("LoginScreen")
+          }}>
             <Text style={styles.signInText}>Login</Text>
           </TouchableOpacity>
         </View>
