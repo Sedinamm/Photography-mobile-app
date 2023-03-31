@@ -7,7 +7,7 @@ const Login = () => {
       {/* Text (Login) */}
       <View style={styles.loginView}>
         {/* <Text style={styles.loginText}>Login and Explore</Text> */}
-        <Image style={{height:330, width:380}} source={require('../Images/we.png')} />
+        <Image style={{height:360, width:400,}} source={require('../Images/7.png')} />
       </View>
 
       {/* TextInput */}
