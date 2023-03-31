@@ -40,7 +40,7 @@ const Login = () => {
       {/* Sign in button and text */}
       <View style={{ flex: 2, backgroundColor: "brown" }}>
         {/* Login Button */}
-        <View style={{ flexDirection: "row", alignSelf: "center", top: 20,  }}>
+        <View style={{ flexDirection: "row", alignSelf: "center", top: 10,  }}>
           <TouchableOpacity>
             <View style={styles.signInVew}>
               <Text style={styles.signInText}>Login</Text>
