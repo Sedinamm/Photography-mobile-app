@@ -156,7 +156,7 @@ const styles = {
   signInText: {
     color: "#fff",
     // fontWeight: "bold",
-    fontSize: 17,
+    fontSize: 16,
     top:-10
   },
 };
