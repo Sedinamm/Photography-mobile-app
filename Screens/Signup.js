@@ -77,12 +77,12 @@ export default function Signup() {
 
       {/* Text and Icons */}
       <View style={{flex: 3,backgroundColor: "#000",}}>
-      <Text style={{paddingLeft:10,}}>Google, Phone Number and Facebook Icon</Text>
+      <Text style={{paddingLeft:10, color:"white"}}>Google, Phone Number and Facebook Icon</Text>
       </View>
 
       {/* Already have an account? */}
       <View style={{flex: 1,backgroundColor: "#000",}}>
-      <Text style={{paddingLeft:10, paddingTop:30}}>By signing up, you agee to our terms of use</Text>
+      <Text style={{paddingLeft:10, paddingTop:30, color:"white"}}>By signing up, you agee to our terms of use</Text>
       </View>
     </View>
   );
