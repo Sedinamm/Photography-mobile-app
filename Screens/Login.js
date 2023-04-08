@@ -102,7 +102,7 @@ const styles = {
   },
 
   loginImage: {
-    height: 320,
+    height: 321,
     width: 400,
   },
 
