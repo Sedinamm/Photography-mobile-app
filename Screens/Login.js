@@ -103,7 +103,7 @@ const styles = {
 
   loginImage: {
     height: 321,
-    width: 400,
+    width: 401,
   },
 
   // TextInputs
