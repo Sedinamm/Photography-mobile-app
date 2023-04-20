@@ -60,7 +60,7 @@ export default function Signup() {
           <Text style={{color:"white", marginLeft:143, bottom:20,}}>
             Already have an account? 
             <TouchableOpacity>
-              <Text style={{color:"#00FFF0", bottom:-3,}}>Sign In</Text>
+              <Text style={{color:"#00FFF0", bottom:-4,}}>Sign In</Text>
             </TouchableOpacity>
               </Text>
             </View>
