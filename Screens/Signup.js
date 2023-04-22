@@ -77,7 +77,7 @@ export default function Signup() {
 
       {/* Text and Icons */}
       <View style={{flex: 3,backgroundColor: "#000",}}>
-      <Text style={{paddingLeft:10, color:"white"}}>Google, Phone Number and Facebook Icon</Text>
+      <Text style={{paddingLeft:10, color:"white"}}>Google, Phone Number</Text>
       </View>
 
       {/* Already have an account? */}
