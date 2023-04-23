@@ -165,7 +165,7 @@ const styles = {
   bottomView: {
     flexDirection: "row",
     alignSelf: "center",
-    top: 10,
+    top: 11,
   },
 
   phoneView: {
