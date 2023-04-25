@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image,SafeAreaView, TextInput } from 'react-native'
 import React from 'react'
-import TabNavigator from '../Screens/TabNavigator';
+
 
 
 const Home = () => {
