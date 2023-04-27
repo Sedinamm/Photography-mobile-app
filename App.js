@@ -10,6 +10,7 @@ import Login from './Screens/Login';
 import PrivacyPolicy from './Screens/PrivacyPolicy';
 import Home from './Screens/Home';
 import Profile from './Screens/Profile';
+import NotificationScreen from './Screens/NotificationScreen';
 
 
 const Stack = createStackNavigator()
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Profile' component={Profile} />
         <Stack.Screen name='PrivacyPolicy' component={PrivacyPolicy} />
+        <Stack.Screen name='NotificationScreen' component={NotificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
