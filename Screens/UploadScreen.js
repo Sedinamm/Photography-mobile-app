@@ -3,7 +3,7 @@ import React from 'react'
 
 const UploadScreen = () => {
   return (
-    <View>
+    <View style={{flex:10, alignItems:"center", justifyContent:"center"}}>
       <Text>UploadScreen</Text>
     </View>
   )
