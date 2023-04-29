@@ -11,6 +11,7 @@ import PrivacyPolicy from './Screens/PrivacyPolicy';
 import Home from './Screens/Home';
 import Profile from './Screens/Profile';
 import NotificationScreen from './Screens/NotificationScreen';
+import UploadScreen from './Screens/UploadScreen';
 
 
 const Stack = createStackNavigator()
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen name='Profile' component={Profile} />
         <Stack.Screen name='PrivacyPolicy' component={PrivacyPolicy} />
         <Stack.Screen name='NotificationScreen' component={NotificationScreen} />
+        <Stack.Screen name='UploadScreen' component={UploadScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
