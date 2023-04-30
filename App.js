@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 import IntroScreen from './Screens/IntroScreen';
@@ -12,6 +13,7 @@ import Home from './Screens/Home';
 import Profile from './Screens/Profile';
 import NotificationScreen from './Screens/NotificationScreen';
 import UploadScreen from './Screens/UploadScreen';
+import Main from './Screens/Main';
 
 
 const Stack = createStackNavigator()
@@ -28,6 +30,7 @@ export default function App() {
         <Stack.Screen name='PrivacyPolicy' component={PrivacyPolicy} />
         <Stack.Screen name='NotificationScreen' component={NotificationScreen} />
         <Stack.Screen name='UploadScreen' component={UploadScreen} />
+        <Stack.Screen name='Main' component={Main} />
       </Stack.Navigator>
     </NavigationContainer>
   );

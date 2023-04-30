@@ -3,8 +3,8 @@ import React from 'react'
 
 const PrivacyPolicy = () => {
   return (
-    <View>
-      <Text>PrivacyPolicy</Text>
+    <View style={{flex:1,justifyContent:"center", alignItems:"center"}}>
+      <Text>Privacy Policy</Text>
     </View>
   )
 }
