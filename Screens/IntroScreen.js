@@ -170,11 +170,11 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-const IntroScreen = () => {
+const IntroScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../Images/2.png")}
+        source={require("../Images/11.png")}
         style={styles.image}
         resizeMode="cover"
       />
@@ -183,14 +183,21 @@ const IntroScreen = () => {
         <Text style={styles.description}>Your copyright-free images app</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SignupScreen");
+          }}
+          style={styles.button}
+        >
           <Text style={styles.buttonText}>Freelance</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Download</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.loginText}>Already have an account? Log in</Text>
+      <TouchableOpacity>
+        <Text style={styles.loginText}>Already have an account? Log in</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -208,13 +215,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     // alignItems: "center",
-    marginBottom: 30, // Adjust as needed
+    marginBottom: 10, // Adjust as needed
+    paddingLeft: 20,
   },
   title: {
     fontSize: 36,
     fontWeight: "bold",
     color: "white",
-    marginBottom: 10,
+    marginBottom: 7,
   },
   description: {
     fontSize: 18,
@@ -226,6 +234,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 40, // Adjust as needed
+    paddingLeft: 20,
   },
   button: {
     backgroundColor: "white",
