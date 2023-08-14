@@ -1,162 +1,256 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+// import {
+//   View,
+//   Text,
+//   SafeAreaView,
+//   TouchableOpacity,
+//   Image,
+// } from "react-native";
+// import React from "react";
+
+// const IntroScreen = ({ navigation }) => {
+//   return (
+//     <SafeAreaView>
+//       <View>
+//         {/* Image */}
+//         <Image
+//           style={styles.backgroundImage}
+//           source={require("../Images/2.png")}
+//         />
+
+//         {/* Text */}
+//         <Text style={styles.introText}>PicLancer</Text>
+
+//         <Text style={styles.fullStop}>.</Text>
+
+//         {/* Short Description */}
+//         <Text style={styles.shortDescription}>
+//           Your Copyright Free Images {"\n"} App
+//         </Text>
+
+//         {/* Cards */}
+//         <View style={styles.parentCardView}>
+//           <TouchableOpacity
+//             onPress={() => {
+//               navigation.navigate("SignupScreen");
+//             }}
+//           >
+//             <View style={styles.firstCardView}>
+//               <Text style={styles.cardText1}>Freelance</Text>
+//             </View>
+//           </TouchableOpacity>
+
+//           {/* Second Card */}
+//           <View>
+//             <TouchableOpacity
+//               onPress={() => {
+//                 navigation.navigate("SignupScreen");
+//               }}
+//             >
+//               <View style={styles.secondCardView}>
+//                 <Text style={styles.cardText2}>Download</Text>
+//               </View>
+//             </TouchableOpacity>
+//           </View>
+//         </View>
+
+//         <View style={styles.signInView}>
+//           <TouchableOpacity
+//             onPress={() => {
+//               navigation.navigate("LoginScreen");
+//             }}
+//           >
+//             <Text style={styles.signInText}>Login</Text>
+//           </TouchableOpacity>
+//         </View>
+//       </View>
+//     </SafeAreaView>
+//   );
+// };
+
+// export default IntroScreen;
+
+// const styles = {
+//   backgroundImage: {
+//     width: 400,
+//     height: 822,
+//   },
+
+//   introText: {
+//     color: "white",
+//     fontSize: 40,
+//     position: "absolute",
+//     top: 500,
+//     left: 25,
+//     fontWeight: "bold",
+//     shadowOpacity: 1,
+//   },
+
+//   fullStop: {
+//     color: "#00FFF0",
+//     position: "absolute",
+//     fontSize: 70,
+//     left: 203,
+//     top: 470,
+//     shadowOpacity: 1,
+//   },
+
+//   shortDescription: {
+//     position: "absolute",
+//     top: 551,
+//     left: 25,
+//     color: "white",
+//     fontSize: 20,
+//     fontWeight: "bold",
+//     shadowOpacity: 1,
+//   },
+
+//   parentCardView: {
+//     flexDirection: "row",
+//     position: "absolute",
+//   },
+
+//   firstCardView: {
+//     backgroundColor: "white",
+//     padding: 20,
+//     width: "150%",
+//     top: 620,
+//     left: 15,
+//     height: 70,
+//     borderRadius: 10,
+//     shadowColor: "black",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.26,
+//     shadowRadius: 6,
+//     elevation: 5,
+//   },
+
+//   cardText1: {
+//     color: "black",
+//     textAlign: "center",
+//     // fontWeight: "bold",
+//     top: 5,
+//   },
+
+//   secondCardView: {
+//     backgroundColor: "white",
+//     padding: 20,
+//     width: "150%",
+//     top: 620,
+//     left: 90,
+//     height: 70,
+//     borderRadius: 10,
+//     shadowColor: "black",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.26,
+//     shadowRadius: 6,
+//     elevation: 5,
+//   },
+
+//   cardText2: {
+//     color: "black",
+//     textAlign: "center",
+//     // fontWeight: "bold",
+//     top: 5,
+//   },
+
+//   signInView: {
+//     position: "absolute",
+//     alignSelf: "center",
+//     top: 720,
+//   },
+
+//   signInText: {
+//     color: "#fff",
+//     // fontWeight: "bold",
+//     fontSize: 16,
+//     top: -10,
+//   },
+// };
+
 import React from "react";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-const IntroScreen = ({navigation}) => {
+const IntroScreen = () => {
   return (
-    <SafeAreaView>
-      <View>
-        {/* Image */}
-        <Image
-          style={styles.backgroundImage}
-          source={require("../Images/2.png")}
-        />
-
-        {/* Text */}
-        <Text style={styles.introText}>PicLancer</Text>
-
-        <Text style={styles.fullStop}>.</Text>
-
-        {/* Short Description */}
-        <Text style={styles.shortDescription}>
-          Your Copyright Free Images {"\n"} App
-        </Text>
-
-        {/* Cards */}
-        <View style={styles.parentCardView}>
-          <TouchableOpacity onPress={()=> {
-            navigation.navigate("SignupScreen")
-          }}>
-            <View style={styles.firstCardView}>
-              <Text style={styles.cardText1}>Freelance</Text>
-            </View>
-          </TouchableOpacity>
-
-          {/* Second Card */}
-          <View>
-            <TouchableOpacity onPress={()=>{
-              navigation.navigate("SignupScreen")
-            }}>
-              <View style={styles.secondCardView}>
-                <Text style={styles.cardText2}>Download</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.signInView}>
-          <TouchableOpacity onPress={()=>{
-            navigation.navigate("LoginScreen")
-          }}>
-            <Text style={styles.signInText}>Login</Text>
-          </TouchableOpacity>
-        </View>
+    <View style={styles.container}>
+      <Image
+        source={require("../Images/2.png")}
+        style={styles.image}
+        resizeMode="cover"
+      />
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>PicLancer</Text>
+        <Text style={styles.description}>Your copyright-free images app</Text>
       </View>
-    </SafeAreaView>
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Freelance</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Download</Text>
+        </TouchableOpacity>
+      </View>
+      <Text style={styles.loginText}>Already have an account? Log in</Text>
+    </View>
   );
 };
 
-export default IntroScreen;
-
-const styles = {
-  backgroundImage: {
-    width: 400,
-    height: 822,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
   },
-
-  introText: {
-    color: "white",
-    fontSize: 40,
+  image: {
     position: "absolute",
-    top: 500,
-    left: 25,
+    width: "100%",
+    height: "100%",
+  },
+  textContainer: {
+    flex: 1,
+    justifyContent: "flex-end",
+    // alignItems: "center",
+    marginBottom: 30, // Adjust as needed
+  },
+  title: {
+    fontSize: 36,
     fontWeight: "bold",
-    shadowOpacity: 1,
-  },
-
-  fullStop: {
-    color: "#00FFF0",
-    position: "absolute",
-    fontSize: 70,
-    left: 203,
-    top: 470,
-    shadowOpacity: 1,
-  },
-
-  shortDescription: {
-    position: "absolute",
-    top: 551,
-    left: 25,
     color: "white",
-    fontSize: 20,
-    fontWeight: "bold",
-    shadowOpacity: 1,
+    marginBottom: 10,
   },
-
-  parentCardView: {
+  description: {
+    fontSize: 18,
+    color: "white",
+    marginBottom: 20,
+  },
+  buttonsContainer: {
     flexDirection: "row",
-    position: "absolute",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 40, // Adjust as needed
   },
-
-  firstCardView: {
+  button: {
     backgroundColor: "white",
-    padding: 20,
-    width: "150%",
-    top: 620,
-    left: 15,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 8,
+    marginRight: 20, // Adjust as needed
+    width: "45%",
     height: 70,
-    borderRadius: 10,
-    shadowColor: "black",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.26,
-    shadowRadius: 6,
-    elevation: 5,
+    justifyContent: "center",
+    alignItems: "center",
   },
-
-  cardText1: {
+  buttonText: {
     color: "black",
-    textAlign: "center",
-    // fontWeight: "bold",
-    top: 5,
-  },
-
-  secondCardView: {
-    backgroundColor: "white",
-    padding: 20,
-    width: "150%",
-    top: 620,
-    left: 90,
-    height: 70,
-    borderRadius: 10,
-    shadowColor: "black",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.26,
-    shadowRadius: 6,
-    elevation: 5,
-  },
-
-  cardText2: {
-    color: "black",
-    textAlign: "center",
-    // fontWeight: "bold",
-    top: 5,
-  },
-
-  signInView: {
-    position: "absolute",
-    alignSelf: "center",
-    top: 720,
-  },
-
-  signInText: {
-    color: "#fff",
-    // fontWeight: "bold",
     fontSize: 16,
-    top:-10
+    // textAlign: "center",
+    // fontWeight: "bold",
   },
-};
+  loginText: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 16,
+    marginBottom: 20, // Adjust as needed
+    bottom: 15,
+  },
+});
+
+export default IntroScreen;
