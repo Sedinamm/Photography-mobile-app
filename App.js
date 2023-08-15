@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import IntroScreen from "./Screens/IntroScreen";
 import Signup from "./Screens/SignupScreen";
-import Login from "./Screens/Login";
+import LoginScreen from "./Screens/LoginScreen";
 import PrivacyPolicy from "./Screens/PrivacyPolicy";
 import Home from "./Screens/Home";
 import Profile from "./Screens/Profile";
@@ -21,7 +21,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="IntroScreen" component={IntroScreen} />
-        <Stack.Screen name="LoginScreen" component={Login} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={Signup} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} />
