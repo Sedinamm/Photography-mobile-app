@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 
-const Login = ({navigation}) => {
+const Login = ({ navigation }) => {
   return (
     <View style={styles.parentView}>
       {/* Image and text (Login) */}
@@ -46,11 +46,14 @@ const Login = ({navigation}) => {
       </View>
 
       {/* Sign in button and text */}
-      <View style={{ flex: 2, backgroundColor:"black" }}>
+      <View style={{ flex: 2, backgroundColor: "black" }}>
         {/* Login Button */}
         <View style={styles.bottomView}>
-          <TouchableOpacity onPress={()=>{navigation.navigate
-          ("Home")}}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
             <View style={styles.signInVew}>
               <Text style={styles.signInText}>Login</Text>
             </View>

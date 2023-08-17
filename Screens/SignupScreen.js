@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     alignSelf: "flex-start",
-    top: -100,
+    top: -80,
   },
   imageContainer: {
     flexDirection: "row",
