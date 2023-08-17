@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 8,
-    marginRight: 20, // Adjust as needed
+    marginRight: 20,
     width: "45%",
     height: 70,
     justifyContent: "center",
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: 16,
-    marginBottom: 20, // Adjust as needed
+    marginBottom: 20,
     bottom: 15,
   },
 });
