@@ -3,7 +3,6 @@
 // import Profile from "./Profile";
 // import UploadScreen from "./UploadScreen";
 
-
 // export {
 //     Home,
 //     NotificationScreen,
@@ -19,15 +18,22 @@ import NotificationScreen from "./NotificationScreen";
 import { Entypo } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import HomeScreen from "./HomeScreen";
 
 const Tab = createBottomTabNavigator();
 
 const Main = () => {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false, tabBarStyle: {backgroundColor: "#292929"}, tabBarActiveTintColor: "white" }}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: { backgroundColor: "#292929" },
+        tabBarActiveTintColor: "white",
+      }}
+    >
       <Tab.Screen
-        name="Home"
-        component={Home}
+        name="HomeScreen"
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Entypo name="home" size={size} color={color} />

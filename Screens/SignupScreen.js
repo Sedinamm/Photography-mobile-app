@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>PicLancer</Text>
@@ -36,7 +36,12 @@ const SignUpScreen = () => {
         secureTextEntry
       />
       {/* Create Account Button */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("HomeScreen");
+        }}
+        style={styles.button}
+      >
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
       {/* Sign up with google button */}
@@ -44,7 +49,11 @@ const SignUpScreen = () => {
         <Text style={styles.buttonText}>Sign Up with Google</Text>
       </TouchableOpacity>
       {/* Already have an account button */}
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("LoginScreen");
+        }}
+      >
         <Text style={styles.alreadyHaveAnAccount}>
           Already have an account? Sign in
         </Text>

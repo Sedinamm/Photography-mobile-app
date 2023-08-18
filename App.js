@@ -8,11 +8,11 @@ import IntroScreen from "./Screens/IntroScreen";
 import Signup from "./Screens/SignupScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import PrivacyPolicy from "./Screens/PrivacyPolicy";
-import Home from "./Screens/Home";
+import HomeScreen from "./Screens/HomeScreen";
 import Profile from "./Screens/Profile";
 import NotificationScreen from "./Screens/NotificationScreen";
 import UploadScreen from "./Screens/UploadScreen";
-import Main from "./Screens/Main";
+// import Main from "./Screens/Main";
 
 const Stack = createStackNavigator();
 
@@ -23,7 +23,7 @@ export default function App() {
         <Stack.Screen name="IntroScreen" component={IntroScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={Signup} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
         <Stack.Screen
@@ -31,7 +31,7 @@ export default function App() {
           component={NotificationScreen}
         />
         <Stack.Screen name="UploadScreen" component={UploadScreen} />
-        <Stack.Screen name="Main" component={Main} />
+        {/* <Stack.Screen name="Main" component={Main} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
