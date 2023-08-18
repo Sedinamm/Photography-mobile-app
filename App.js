@@ -11,10 +11,9 @@ import Signup from "./Screens/SignupScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import PrivacyPolicy from "./Screens/PrivacyPolicy";
 import HomeScreen from "./Screens/HomeScreen";
-import Profile from "./Screens/Profile";
+import ProfileScreen from "./Screens/ProfileScreen";
 import NotificationScreen from "./Screens/NotificationScreen";
 import UploadScreen from "./Screens/UploadScreen";
-// import Main from "./Screens/Main";
 
 // const Tab = createBottomTabNavigator();
 
@@ -99,14 +98,13 @@ export default function App() {
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={Signup} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
         <Stack.Screen
           name="NotificationScreen"
           component={NotificationScreen}
         />
         <Stack.Screen name="UploadScreen" component={UploadScreen} />
-        {/* <Stack.Screen name="Main" component={Main} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
