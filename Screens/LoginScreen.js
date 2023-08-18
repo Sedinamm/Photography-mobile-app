@@ -1,220 +1,125 @@
+import React from "react";
 import {
   View,
   Text,
-  TouchableOpacity,
   Image,
   TextInput,
-  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
 } from "react-native";
-import React from "react";
 
-const Login = ({ navigation }) => {
+const SignUpScreen = ({ navigation }) => {
   return (
-    <View style={styles.parentView}>
-      {/* Image and text (Login) */}
-      <View style={styles.loginView}>
-        <Image style={styles.loginImage} source={require("../Images/7.png")} />
+    <View style={styles.container}>
+      {/* <Text style={styles.logo}>PicLancer</Text> */}
+      <View style={styles.imageContainer}>
+        {/* Images */}
+        <Image source={require("../Images/1.png")} style={styles.image} />
       </View>
+      {/* Text */}
+      <Text style={styles.bottomText}>Welcome back</Text>
 
-      {/* TextInput */}
-      <View style={styles.TextInputView}>
-        <View style={{ top: -10 }}>
-          {/* Email */}
-          <View style={styles.emailView}>
-            <TextInput
-              keyboardType="email-address"
-              placeholder="Email"
-              style={styles.emailTextInput}
-            />
-          </View>
-
-          {/* Password */}
-          <View style={styles.passwordView}>
-            <TextInput
-              placeholder="Password"
-              style={styles.passwordTextInput}
-            />
-          </View>
-
-          {/* Forgot password button */}
-          <TouchableOpacity>
-            <View style={styles.forgotPasswordbtnView}>
-              <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      {/* Sign in button and text */}
-      <View style={{ flex: 2, backgroundColor: "black" }}>
-        {/* Login Button */}
-        <View style={styles.bottomView}>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("Home");
-            }}
-          >
-            <View style={styles.signInVew}>
-              <Text style={styles.signInText}>Login</Text>
-            </View>
-          </TouchableOpacity>
-
-          {/* Phone and Google button */}
-          {/* Phone button */}
-          <TouchableOpacity>
-            <View style={styles.phoneView}>
-              <Image
-                style={styles.phoneImage}
-                source={require("../Images/Untitled-1.png")}
-              />
-            </View>
-          </TouchableOpacity>
-
-          {/* Google button */}
-          <TouchableOpacity>
-            <View style={styles.googleView}>
-              <Image
-                style={styles.googleImage}
-                source={require("../Images/google.png")}
-              />
-            </View>
-          </TouchableOpacity>
-        </View>
-
-        {/* Dont have an account? */}
-        <View style={styles.NoAccount}>
-          <Text style={styles.textColor}>Don't have an account?</Text>
-          <TouchableOpacity>
-            <Text style={styles.SignUpbutton}>Sign up</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Email and Password Input Section */}
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        placeholderTextColor="#999"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        placeholderTextColor="#999"
+        secureTextEntry
+      />
+      {/* Create Account Button */}
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("HomeScreen");
+        }}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Sign In</Text>
+      </TouchableOpacity>
+      {/* Forgot password */}
+      <TouchableOpacity>
+        <Text style={styles.forgotPassword}>Forgot password?</Text>
+      </TouchableOpacity>
+      {/* Don't have an account button */}
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("LoginScreen");
+        }}
+      >
+        <Text style={styles.dontHaveAnAccount}>
+          Don't have an account? Sign in
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-export default Login;
-
-const styles = {
-  parentView: {
-    flex: 10,
-  },
-  // Login View and text
-  loginView: {
-    flex: 4,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
     backgroundColor: "black",
-  },
-
-  loginImage: {
-    height: 321,
-    width: 401,
-  },
-
-  // TextInputs
-  TextInputView: {
-    flex: 4,
-    backgroundColor: "black",
-  },
-
-  emailView: {
-    top: 20,
-    margin: 20,
-  },
-
-  emailTextInput: {
-    backgroundColor: "white",
-    padding: 20,
-    borderRadius: 10,
-  },
-
-  passwordView: {
-    top: 5,
-    margin: 20,
-  },
-
-  passwordTextInput: {
-    backgroundColor: "white",
-    padding: 20,
-    borderRadius: 10,
-  },
-
-  // Forgot password text button
-  forgotPasswordbtnView: {
-    marginLeft: 238,
-    bottom: 10,
-  },
-
-  forgotPasswordText: {
-    color: "white",
-  },
-
-  signInVew: {
-    height: 60,
-    width: 150,
-    backgroundColor: "#00FFF0",
-    // backgroundColor: "#00FFF0",
     justifyContent: "center",
-    borderRadius: 10,
     alignItems: "center",
-    marginRight: 10,
+    padding: 20,
   },
-
-  signInText: {
-    color: "#000",
-    // fontWeight:"bold",
-    fontSize: 15,
-  },
-
-  // Bottom
-  bottomView: {
+  imageContainer: {
     flexDirection: "row",
-    alignSelf: "center",
-    top: 11,
+    justifyContent: "space-between",
+    marginBottom: 20,
+    bottom: 50,
   },
-
-  phoneView: {
-    height: 60,
-    width: 80,
-    backgroundColor: "white",
-    borderRadius: 10,
+  image: {
+    width: 400,
+    height: 321,
+    // borderRadius: 40,
   },
-
-  phoneImage: {
-    height: 60,
-    width: 80,
-    alignSelf: "center",
-    bottom: 1,
+  bottomText: {
+    textAlign: "center",
+    color: "#fff",
+    marginBottom: 20,
+    bottom: 50,
+    alignSelf: "flex-start",
+    fontSize: 20,
+    fontWeight: "bold",
   },
-
-  googleView: {
-    height: 60,
-    width: 80,
-    backgroundColor: "white",
-    borderRadius: 10,
-    marginLeft: 10,
-    // shadowOpacity:9,
+  input: {
+    width: "100%",
+    height: 40,
+    backgroundColor: "#333",
+    color: "#fff",
+    marginBottom: 10,
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    bottom: 50,
   },
-
-  googleImage: {
-    height: 30,
-    width: 30,
-    alignSelf: "center",
-    top: 15,
+  button: {
+    backgroundColor: "#007BFF",
+    paddingVertical: 12,
+    borderRadius: 5,
+    width: "100%",
+    bottom: 50,
   },
-
-  // Dont have an account
-  NoAccount: {
-    marginTop: 30,
-    alignSelf: "center",
-    flexDirection: "row",
+  buttonText: {
+    color: "#fff",
+    textAlign: "center",
+    fontWeight: "bold",
   },
-
-  textColor: {
+  forgotPassword: {
     color: "white",
+    alignSelf: "flex-start",
+    position: "absolute",
+    left: 50,
+    bottom: 30,
   },
-
-  SignUpbutton: {
-    left: 5,
+  dontHaveAnAccount: {
     color: "white",
+    marginTop: 10,
+    bottom: 20,
   },
-};
+});
+
+export default SignUpScreen;
