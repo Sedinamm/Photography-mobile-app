@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -8,17 +8,29 @@ import {
   StyleSheet,
 } from "react-native";
 import { auth } from "../firebase";
+import { useNavigation } from "@react-navigation/native";
 
-const SignUpScreen = ({ navigation }) => {
+const SignUpScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignUp = () => {
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigation.navigate("HomeScreen");
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  const navigation = useNavigation();
+
+  const handleLogIn = () => {
     auth
-      .createUserWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        console.log(user.email);
+        console.log("Logged in with:", user.email);
       })
       .catch((error) => alert(error.message));
   };
@@ -50,22 +62,18 @@ const SignUpScreen = ({ navigation }) => {
         secureTextEntry
       />
       {/* Create Account Button */}
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("HomeScreen");
-        }}
-        style={styles.button}
-      >
+      <TouchableOpacity onPress={handleLogIn} style={styles.button}>
         <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
       {/* Forgot password */}
       <TouchableOpacity>
         <Text style={styles.forgotPassword}>Forgot password?</Text>
       </TouchableOpacity>
+
       {/* Don't have an account button */}
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("LoginScreen");
+          navigation.navigate("SignupScreen");
         }}
       >
         <Text style={styles.dontHaveAnAccount}>

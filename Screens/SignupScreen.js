@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -7,8 +7,34 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { auth } from "../firebase";
+import { useNavigation } from "@react-navigation/native";
 
-const SignUpScreen = ({ navigation }) => {
+const SignUpScreen = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigation.navigate("HomeScreen");
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  const handleSignUp = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log("Registered in with:", user.email);
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>PicLancer</Text>
@@ -27,27 +53,27 @@ const SignUpScreen = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Email"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
         placeholderTextColor="#999"
       />
       <TextInput
         style={styles.input}
         placeholder="Password"
+        value={password}
+        onChangeText={(text) => setPassword(text)}
         placeholderTextColor="#999"
         secureTextEntry
       />
       {/* Create Account Button */}
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("HomeScreen");
-        }}
-        style={styles.button}
-      >
+      <TouchableOpacity onPress={handleSignUp} style={styles.button}>
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
       {/* Sign up with google button */}
       <TouchableOpacity style={styles.googleButton}>
         <Text style={styles.buttonText}>Sign Up with Google</Text>
       </TouchableOpacity>
+
       {/* Already have an account button */}
       <TouchableOpacity
         onPress={() => {
