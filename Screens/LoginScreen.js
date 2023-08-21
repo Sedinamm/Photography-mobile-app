@@ -18,7 +18,7 @@ const SignUpScreen = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        navigation.navigate("HomeScreen");
+        navigation.navigate("CompleteProfileScreen");
       }
     });
     return unsubscribe;
@@ -53,6 +53,7 @@ const SignUpScreen = () => {
         value={email}
         onChangeText={(text) => setEmail(text)}
         placeholderTextColor="#999"
+        keyboardType="email-address"
       />
       <TextInput
         style={styles.input}

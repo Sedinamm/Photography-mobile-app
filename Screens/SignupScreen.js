@@ -55,6 +55,7 @@ const SignUpScreen = () => {
         placeholder="Email"
         value={email}
         onChangeText={(text) => setEmail(text)}
+        keyboardType="email-address"
         placeholderTextColor="#999"
       />
       <TextInput
