@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import React from "react";
 
-const CompleteProfileScreen = () => {
+const CompleteProfileScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header text */}
@@ -34,7 +34,10 @@ const CompleteProfileScreen = () => {
       />
 
       {/* Button */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("HomeScreen")}
+        style={styles.button}
+      >
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
     </SafeAreaView>
