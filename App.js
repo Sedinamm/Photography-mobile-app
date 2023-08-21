@@ -14,6 +14,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import NotificationScreen from "./Screens/NotificationScreen";
 import UploadScreen from "./Screens/UploadScreen";
+import CompleteProfileScreen from "./Screens/CompleteProfileScreen";
 
 // const Tab = createBottomTabNavigator();
 
@@ -100,6 +101,10 @@ export default function App() {
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+        <Stack.Screen
+          name="CompleteProfileScreen"
+          component={CompleteProfileScreen}
+        />
         <Stack.Screen
           name="NotificationScreen"
           component={NotificationScreen}

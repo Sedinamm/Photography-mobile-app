@@ -19,7 +19,7 @@ const SignUpScreen = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        navigation.navigate("HomeScreen");
+        navigation.navigate("CompleteProfileScreen");
       }
     });
     return unsubscribe;

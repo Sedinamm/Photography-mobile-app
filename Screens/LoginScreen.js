@@ -78,7 +78,7 @@ const SignUpScreen = () => {
         }}
       >
         <Text style={styles.dontHaveAnAccount}>
-          Don't have an account? Sign in
+          Don't have an account? Sign up
         </Text>
       </TouchableOpacity>
     </KeyboardAvoidingView>
