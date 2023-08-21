@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  KeyboardAvoidingView,
 } from "react-native";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/native";
@@ -36,7 +37,7 @@ const SignUpScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior="padding">
       {/* <Text style={styles.logo}>PicLancer</Text> */}
       <View style={styles.imageContainer}>
         {/* Images */}
@@ -80,7 +81,7 @@ const SignUpScreen = () => {
           Don't have an account? Sign in
         </Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
