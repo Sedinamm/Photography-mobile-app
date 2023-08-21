@@ -8,7 +8,6 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-// import { TouchableOpacity } from "react-native-gesture-handler";
 
 const CompleteProfileScreen = () => {
   return (
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: "black",
-    // padding: 20,
   },
   headerText: {
     color: "white",
