@@ -13,7 +13,7 @@ const CompleteProfileScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header text */}
-      <Text style={styles.headerText}>Complete your Profile</Text>
+      <Text style={styles.headerText}>Complete Your Profile</Text>
 
       {/* Upload Profile Pictiure */}
       <TouchableOpacity>
