@@ -38,7 +38,7 @@ const CompleteProfileScreen = ({ navigation }) => {
         onPress={() => navigation.navigate("HomeScreen")}
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Next</Text>
+        <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
