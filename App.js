@@ -1,6 +1,4 @@
 import "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -13,24 +11,24 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import NotificationScreen from "./Screens/NotificationScreen";
 import UploadScreen from "./Screens/UploadScreen";
 import CompleteProfileScreen from "./Screens/CompleteProfileScreen";
-import BottomTabNavigation from "./Screens/BottomTabNavigation";
+import BottomTabsNavigator from "./Screens/BottomTabsNavigator";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer initialRouteName="IntroScreen">
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen
+          name="BottomTabsNavigator"
+          component={BottomTabsNavigator}
+        />
         <Stack.Screen name="IntroScreen" component={IntroScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={Signup} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
-        <Stack.Screen
-          name="BottomTabNavigation"
-          component={BottomTabNavigation}
-        />
         <Stack.Screen
           name="CompleteProfileScreen"
           component={CompleteProfileScreen}

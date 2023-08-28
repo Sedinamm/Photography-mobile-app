@@ -10,7 +10,7 @@ import React from "react";
 const ProfileScreen = () => {
   return (
     <View style={{ flex: 10, alignItems: "center", justifyContent: "center" }}>
-      <Text>Profile</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 };
