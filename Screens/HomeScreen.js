@@ -6,82 +6,104 @@ import {
   SafeAreaView,
   TextInput,
   StyleSheet,
+  FlatList,
 } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 // import { Ionicons } from "@expo/vector-icons";
 
-const HomeScreen = () => {
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.container}>
-        {/* logo */}
-        <View style={styles.logoContainer}>
-          <Image style={styles.logo} source={require("../Images/logo.png")} />
-        </View>
-        {/* Search bar */}
-        <TextInput
-          style={styles.searchBar}
-          placeholder="Search"
-          placeholderTextColor="#999"
+const DATA = [
+  {
+    user_name: "John Doe",
+    profile_pic: "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+    feed_image:
+      "https://c4.wallpaperflare.com/wallpaper/313/134/489/space-computer-1920x1200-desktop-wallpaper-preview.jpg",
+  },
+  {
+    user_name: "Mary Jane",
+    profile_pic:
+      "https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+    feed_image:
+      "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000",
+  },
+  {
+    user_name: "Jaylen Green",
+    profile_pic:
+      "https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+    feed_image:
+      "https://c4.wallpaperflare.com/wallpaper/919/217/102/cool-wallpaper-preview.jpg",
+  },
+];
+
+const Item = ({ user_name, profile_pic, feed_image }) => (
+  <View style={styles.card}>
+    <View style={styles.cardHeader}>
+      <View style={styles.headerLeft}>
+        {/* Profile Picture */}
+        <Image
+          style={styles.profilePic}
+          source={{
+            uri: profile_pic,
+          }}
         />
-        {/* Feed */}
-        <View>
-          <Text
-            style={{
-              color: "white",
-              fontSize: 17,
-              bottom: 20,
-              fontWeight: "bold",
-            }}
-          >
-            Trending
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <View style={styles.cardHeader}>
-            <View style={styles.headerLeft}>
-              {/* Profile Picture */}
-              <Image
-                style={styles.profilePic}
-                source={{
-                  uri: "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
-                }}
-              />
-              {/* Username */}
-              <Text style={styles.userName}>Gabriel Sedinam</Text>
-            </View>
-            {/* follow button */}
-            <View style={styles.headerRight}>
-              <TouchableOpacity>
-                <View style={styles.followView}>
-                  <Text style={styles.followBtnText}>Follow</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
+        <Text style={styles.userName}>{user_name}</Text>
+      </View>
+      {/* follow button */}
+      <View style={styles.headerRight}>
+        <TouchableOpacity>
+          <View style={styles.followView}>
+            <Text style={styles.followBtnText}>Follow</Text>
           </View>
-          {/* Feed Image */}
-          <Image
-            style={styles.feedImage}
-            source={{
-              uri: "https://i.guim.co.uk/img/media/6ff0b5e28c50c3368affb7a6ca9ffee58a818029/0_25_3343_2006/master/3343.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d44c417743f1cdf12bdb0fd672de5791",
-            }}
-          />
-          <View style={styles.cardFooter}>
-            <View style={styles.footerLeft}>
-              <View style={{ flexDirection: "row" }}>
-                <FontAwesome name="heart" color="red" size={25} />
-                <View style={{ flexDirection: "row", marginLeft: 15 }}>
-                  <FontAwesome name="bookmark" color="white" size={25} />
-                </View>
-              </View>
-            </View>
-            <View style={{ marginRight: 10 }}>
-              <FontAwesome name="download" color="white" size={25} />
-            </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+    <Image
+      style={styles.feedImage}
+      source={{
+        uri: feed_image,
+      }}
+    />
+    <View style={styles.cardFooter}>
+      <View style={styles.footerLeft}>
+        <View style={{ flexDirection: "row" }}>
+          <FontAwesome name="heart" color="red" size={25} />
+          <View style={{ flexDirection: "row", marginLeft: 15 }}>
+            <FontAwesome name="bookmark" color="white" size={25} />
           </View>
         </View>
       </View>
+      <View style={{ marginRight: 10 }}>
+        <FontAwesome name="download" color="white" size={25} />
+      </View>
+    </View>
+  </View>
+);
+
+const HomeScreen = () => {
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      {/* Logo */}
+      <View style={styles.logoContainer}>
+        <Image style={styles.logo} source={require("../Images/logo.png")} />
+      </View>
+      {/* Search bar */}
+      <TextInput
+        style={styles.searchBar}
+        placeholder="Search"
+        placeholderTextColor="#999"
+      />
+      {/* Feed */}
+      <FlatList
+        data={DATA}
+        renderItem={({ item }) => (
+          <Item
+            user_name={item.user_name}
+            profile_pic={item.profile_pic}
+            feed_image={item.feed_image}
+          />
+        )}
+        keyExtractor={(item, index) => index.toString()}
+      />
     </SafeAreaView>
   );
 };
@@ -117,6 +139,7 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 5,
     borderRadius: 10,
+    // bottom: 10,
   },
   cardHeader: {
     flexDirection: "row",
