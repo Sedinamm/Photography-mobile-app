@@ -36,7 +36,7 @@ const BottomTabsNavigator = () => {
         component={NotificationScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="ticket" size={24} color={color} />
+            <MaterialCommunityIcons name="bell" size={24} color={color} />
           ),
         }}
       />

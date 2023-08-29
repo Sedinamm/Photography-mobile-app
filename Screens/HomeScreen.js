@@ -29,7 +29,7 @@ const DATA = [
   {
     user_name: "Jaylen Green",
     profile_pic:
-      "https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+      "https://thumbs.dreamstime.com/b/generative-ai-young-smiling-man-avatar-man-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-d-vector-people-279560903.jpg",
     feed_image:
       "https://c4.wallpaperflare.com/wallpaper/919/217/102/cool-wallpaper-preview.jpg",
   },
@@ -66,15 +66,21 @@ const Item = ({ user_name, profile_pic, feed_image }) => (
     <View style={styles.cardFooter}>
       <View style={styles.footerLeft}>
         <View style={{ flexDirection: "row" }}>
-          <FontAwesome name="heart" color="red" size={25} />
-          <View style={{ flexDirection: "row", marginLeft: 15 }}>
-            <FontAwesome name="bookmark" color="white" size={25} />
-          </View>
+          <TouchableOpacity>
+            <FontAwesome name="heart" color="red" size={25} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={{ flexDirection: "row", marginLeft: 15 }}>
+              <FontAwesome name="bookmark" color="white" size={25} />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
-      <View style={{ marginRight: 10 }}>
-        <FontAwesome name="download" color="white" size={25} />
-      </View>
+      <TouchableOpacity>
+        <View style={{ marginRight: 10 }}>
+          <FontAwesome name="download" color="white" size={25} />
+        </View>
+      </TouchableOpacity>
     </View>
   </View>
 );
