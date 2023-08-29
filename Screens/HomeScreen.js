@@ -57,12 +57,14 @@ const Item = ({ user_name, profile_pic, feed_image }) => (
         </TouchableOpacity>
       </View>
     </View>
-    <Image
-      style={styles.feedImage}
-      source={{
-        uri: feed_image,
-      }}
-    />
+    <TouchableOpacity>
+      <Image
+        style={styles.feedImage}
+        source={{
+          uri: feed_image,
+        }}
+      />
+    </TouchableOpacity>
     <View style={styles.cardFooter}>
       <View style={styles.footerLeft}>
         <View style={{ flexDirection: "row" }}>
