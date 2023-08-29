@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TextInput,
   StyleSheet,
+  Image,
 } from "react-native";
 import React from "react";
 
@@ -14,7 +15,9 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <View style={styles.header}>
-          <View style={styles.logo}></View>
+          <View style={styles.logo}>
+            <Image source={(require = ".")} />
+          </View>
           <View style={styles.profile}></View>
         </View>
       </View>
