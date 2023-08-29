@@ -11,12 +11,25 @@ import React from "react";
 
 const HomeScreen = () => {
   return (
-    <View style={{ flex: 10, alignItems: "center", justifyContent: "center" }}>
-      <Text>HomeScreen</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <View style={styles.logo}></View>
+          <View style={styles.profile}></View>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#000",
+  },
+  container: {
+    flex: 1,
+  },
+});
 
 export default HomeScreen;
