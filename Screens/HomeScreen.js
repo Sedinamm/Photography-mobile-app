@@ -6,7 +6,6 @@ import {
   SafeAreaView,
   TextInput,
   StyleSheet,
-  Image,
 } from "react-native";
 import React from "react";
 
@@ -14,12 +13,17 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <View style={styles.header}>
-          <View style={styles.logo}>
-            <Image source={(require = ".")} />
-          </View>
-          <View style={styles.profile}></View>
+        {/* logo */}
+        <View style={styles.logoContainer}>
+          <Image style={styles.logo} source={require("../Images/logo.png")} />
         </View>
+        {/* Search bar */}
+        <TextInput
+          style={styles.searchBar}
+          placeholder="Search"
+          placeholderTextColor="#999"
+        />
+        {/*  */}
       </View>
     </SafeAreaView>
   );
@@ -32,6 +36,24 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+  },
+  logoContainer: {
+    marginTop: -50,
+  },
+  logo: {
+    height: 150,
+    width: 100,
+  },
+  searchBar: {
+    width: "95%",
+    height: 50,
+    backgroundColor: "#333",
+    color: "#fff",
+    // marginBottom: 10,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    bottom: 50,
+    alignSelf: "center",
   },
 });
 
