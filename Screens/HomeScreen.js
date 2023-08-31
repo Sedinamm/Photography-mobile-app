@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
-// import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 const DATA = [
   {
@@ -136,10 +136,10 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: "#333",
     color: "#fff",
-    // marginBottom: 10,
+    marginBottom: -35,
     paddingHorizontal: 10,
     borderRadius: 10,
-    bottom: 50,
+    bottom: 50, //adjust
     alignSelf: "center",
   },
   card: {

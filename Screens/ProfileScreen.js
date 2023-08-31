@@ -1,22 +1,3 @@
-// import {
-//   View,
-//   Text,
-//   Image,
-//   TouchableOpacity,
-//   SafeAreaView,
-// } from "react-native";
-// import React from "react";
-
-// const ProfileScreen = () => {
-//   return (
-//     <View style={{ flex: 10, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Profile Screen</Text>
-//     </View>
-//   );
-// };
-
-// export default ProfileScreen;
-
 import {
   View,
   Text,
@@ -26,20 +7,20 @@ import {
   TextInput,
 } from "react-native";
 import React from "react";
-import { auth } from "../firebase";
-import { useNavigation } from "@react-navigation/native";
+// import { auth } from "../firebase";
+// import { useNavigation } from "@react-navigation/native";
 
 const ProfileScreen = () => {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
-  const handleSignOut = () => {
-    auth
-      .signOut()
-      .then(() => {
-        navigation.replace("IntroScreen");
-      })
-      .catch((error) => alert(error.message));
-  };
+  // const handleSignOut = () => {
+  //   auth
+  //     .signOut()
+  //     .then(() => {
+  //       navigation.replace("IntroScreen");
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
 
   return (
     // <View style={{ flex: 10, alignItems: "center", justifyContent: "center" }}>
@@ -60,8 +41,15 @@ const ProfileScreen = () => {
     //   </TouchableOpacity>
     // </View>
 
-    <View style={{ flex: 10, alignItems: "center", justifyContent: "center" }}>
-      <Text>Profile Screen</Text>
+    <View
+      style={{
+        flex: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "black",
+      }}
+    >
+      <Text style={{ color: "white" }}>Profile Screen</Text>
     </View>
   );
 };
