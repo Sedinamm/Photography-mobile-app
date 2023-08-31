@@ -69,18 +69,21 @@ const Item = ({ user_name, profile_pic, feed_image }) => (
       <View style={styles.footerLeft}>
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity>
-            <FontAwesome name="heart" color="red" size={25} />
+            {/* <FontAwesome name="heart" color="red" size={25} /> */}
+            <Ionicons name="heart" color="white" size={25} />
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={{ flexDirection: "row", marginLeft: 15 }}>
-              <FontAwesome name="bookmark" color="white" size={25} />
+              {/* <FontAwesome name="bookmark" color="white" size={25} /> */}
+              <Ionicons name="bookmark-outline" color="white" size={25} />
             </View>
           </TouchableOpacity>
         </View>
       </View>
       <TouchableOpacity>
         <View style={{ marginRight: 10 }}>
-          <FontAwesome name="download" color="white" size={25} />
+          {/* <FontAwesome name="download" color="white" size={25} /> */}
+          <Ionicons name="download-outline" color="white" size={25} />
         </View>
       </TouchableOpacity>
     </View>
